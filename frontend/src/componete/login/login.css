@@ -1,0 +1,257 @@
+.contenedor1 {
+   padding: 2rem;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 2rem;
+    opacity: 1;
+  
+  }
+  
+  /* Estilos para el logo */
+  .logoo1 {
+   height: 10rem;
+   width: 10rem;
+ 
+  }
+
+  
+
+  h1 {
+  font-size: 1.5rem;
+    text-align: center;
+    color: #000000;
+    opacity: 1;
+  
+  }
+  
+  /* Estilos para la foto de usuario */
+  .foto-usuario {
+    /* Layout Properties */
+  background-size: cover;
+  background-repeat: no-repeat;
+    background: transparent url('https://th.bing.com/th/id/OIP.asSx0FlhGimLWwCfr3p0RwHaGe?pid=ImgDet&rs=1') 0% 0% no-repeat padding-box;
+    border-radius:10rem;
+    opacity: 1;
+   
+  }
+  
+  /* Estilos para el nombre de usuario */
+  .nombre-usuario {
+    /* Layout Properties */
+
+    /* UI Properties */
+    text-align: center;
+
+    color: #000000;
+    opacity: 1;
+  
+  }
+  
+  .rol {
+
+    text-align: center;
+   
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+   
+  }
+  
+
+  
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.877), rgba(0, 0, 0, 0.877)), url(../../Img/pexels-pixabay-159400.jpg);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.img-animated-container {
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+#img-animated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  opacity: 1;
+  animation: animate-logo 2s linear;
+  position: absolute;
+  
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.contenedor {
+
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 2rem;
+  animation-name: hola;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hola{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+
+.logoAnimado {
+
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  animation-name: hola;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hola{
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
+
+/* .contenedor1 {
+  animation-name: hola;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hola{
+  from{opacity: 1;}
+  to{opacity: 0;}
+} */
+
+
+
+
+.login {
+  padding: 3rem 3rem;
+  
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 2rem;
+  color: #000000;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: show-form 2s ease 2s forwards;
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  color: #000000;
+  padding: 1rem 1rem;
+}
+
+.login img{
+  
+  width:5rem ;height:5rem;
+}
+
+.logo-login{
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+
+.inputs-container {
+  margin-bottom: 20px;
+}
+
+.inputs-container label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.inputs-container input {
+  text-align: start;
+  width: 100%;
+  height: 50px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 20px;
+}
+
+/* Estilos para el botón */
+.button-login button {
+  width: 20rem;
+  height: 4rem;
+  background: #FF6F2C 0% 0% no-repeat padding-box;
+  border-radius: 35px;
+  font-size: 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  
+}
+
+
+.button-login{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+@keyframes animate-logo {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-form {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  

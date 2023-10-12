@@ -1,0 +1,32 @@
+.reportes-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .Table1 {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse; /* Colapsar los bordes para que se vean como un borde continuo */
+  }
+  
+  .Table1 th,
+  .Table1 td {
+    border: 1px solid black;
+  }
+  
+  .CreateUpdate,
+  .CreateDelete {
+    background-color: orange;
+    color: white;
+  }
+  
+  .CreateUpdate:hover,
+  .CreateDelete:hover {
+    background-color: darkorange;
+  }
+  

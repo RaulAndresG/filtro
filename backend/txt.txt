@@ -1,0 +1,110 @@
+
+Accesorios {
+	id: int pk
+	nombre: varchar
+	descripcion: varchar
+	precio: decimal
+	modelo_moto_compatible int > modelo_moto_compatible.id:
+}
+
+modelo_moto_compatible {
+	id: int pk
+	marca: varchar
+	modelo: varchar
+	cilindraje: int
+	anio: int
+	precio: decimal
+	tipo_motor: varchar
+	descripcion: varchar
+	imagenes: varchar
+	comentarios: varchar
+}
+
+Comentarios {
+	id: int pk
+	modelo_moto int > modelo_moto:.id:
+	usuario: varchar
+	comentario: varchar
+	calificacion: int
+}
+
+modelo_moto: {
+	id: int pk
+	marca: varchar
+	modelo: varchar
+	cilindraje: int
+	anio: int
+	precio: decimal
+	tipo_motor: varchar
+	descripcion: varchar
+	imagenes: varchar
+	comentarios: varchar
+}
+
+Especificaciones {
+	id: int pk
+	modelo_moto int > modelo_moto:.id:
+	potencia: int
+	torque: int
+	peso_seco: int
+	altura_asiento: int
+	tipo_chasis: varchar
+	suspension_delanter: varchar
+	suspension_trasera: varchar
+	frenos_delanteros: varchar
+	frenos_traseros: varchar
+	neumaticos: varchar
+	capacidad_tanque: decimal
+	aceleracion_0_100: int
+}
+
+Eventos {
+	id: int pk
+	nombre: varchar
+	fecha_lugar: varchar
+	descripcion: varchar
+	marcas_modelos_destacados:
+	varchar,
+	varchar
+}
+
+Motos {
+	id: int pk
+	marca: varchar
+	modelo: varchar
+	cilindraje: int
+	anio: int
+	preciodecimal
+	tipo_motor: varchar
+	descripcion:varchar
+	comentarios: varchar
+	imagenes: varchar
+}
+
+Marcas {
+	id: int pk
+	nombre:varchar
+	pais_origen:varchar
+	anio_fundacion: int
+	sitio_web: varchar
+	logotipo:varchar
+}
+
+TalleresDeServicio {
+	id: int pk
+	nombre: varchar
+	marca_moto_atienden:
+	varchar,
+	varchar
+	direccion: varchar
+	numero_telefono": decimal
+	horario_atencion: varchar
+}
+
+Ventas {
+	modelo_moto: int > modelo_moto:.id:
+	anio_venta: int
+	cantidad_vendida: int
+	precio_promedio_venta: decimal
+}
+

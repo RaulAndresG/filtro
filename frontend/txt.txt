@@ -1,0 +1,63 @@
+import React, { useState, useEffect } from 'react';
+import './eliminar.css';
+import axios from 'axios'; // Asegúrate de que tengas Axios instalado y configurado en tu proyecto.
+
+const Eliminar = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Reemplaza 'URL_API' con la URL de tu API real
+    axios
+      .get('http://localhost:7777/api/Indicadores')
+      .then((response) => {
+        setData(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error al obtener los datos:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  const handleDelete = (itemId) => {
+    setLoading(true);
+
+    // Reemplaza 'URL_API' con la URL de tu API real
+    axios
+      .delete(`http://localhost:7777/api/Indicadores/${itemId}`)
+      .then(() => {
+        // Si la eliminación es exitosa, actualiza los datos.
+        const updatedData = data.filter((item) => item.id !== itemId);
+        setData(updatedData);
+        setLoading(false);
+        alert('Elemento eliminado con éxito.');
+      })
+      .catch((error) => {
+        console.error('Error al eliminar el elemento:', error);
+        setLoading(false);
+        alert('No se pudo eliminar el elemento.');
+      });
+  };
+
+  // Resto del componente, incluyendo la renderización de la tabla y botones de eliminar.
+
+  return (
+    <div className="eliminar-container">
+      <h2>Eliminar Elementos</h2>
+      {/* Resto del componente */}
+    </div>
+  );
+};
+
+export default Eliminar;
+
+const onDelete = (_id) => {
+    axios.delete(http://localhost:7777/api/Reportes/${_id})
+      .then(() => {
+        getData();
+      })
+      .catch((error) => {
+        console.error('Error al eliminar el elemento:', error);
+      });
+  };
